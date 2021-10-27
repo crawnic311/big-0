@@ -136,7 +136,14 @@ function printFirstTwoNames(array) {
 
 // Starting Code:
 function squareEveryDigit(number) {
-    
+  let strNum = String(number)
+  let strArr = strNum.split('')
+  for(let i = 0; i < strArr.length; i++) {
+    strArr[i] *= strArr[i]
+  }
+  let squareStr = strArr.join('')
+  return squareStr
 }
 
-squareEveryDigit(946) // When running 946, you should see a result of 811636
+console.log(squareEveryDigit(946)) // When running 946, you should see a result of 811636
+// O(n), I think it's as efficient as it can be.
